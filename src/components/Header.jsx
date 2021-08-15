@@ -6,7 +6,7 @@ function Header() {
 
     <header>
       <PolymerIcon />
-      <h1 style={{ display:"inline-block" }}>Keeper</h1>
+      <h1 style={{ display:"inline-block" }}>Notepad</h1>
     </header>
   );
 }
