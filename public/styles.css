@@ -9,6 +9,8 @@ html {
 body {
   background: #eee;
   padding: 0 16px;
+background-image: url("https://www.transparenttextures.com/patterns/psychedelic.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 header {

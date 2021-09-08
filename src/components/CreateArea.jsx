@@ -41,9 +41,9 @@ setExpanded(true);
           placeholder="Take a note..."
           rows={expanded ? 3 : 1 }
         />
-            <Zoom in={expanded} />
+            <Zoom in={expanded}>
              <DoneOutlineIcon className="button" onClick={submitNote} />
-              <Zoom />
+            </Zoom >
        
       </form>
     </div>
