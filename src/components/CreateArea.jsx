@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
+import Zoom from '@material-ui/core/Zoom';
 function CreateArea(props) {
   const [note, setNote] = useState({
     title: "",
@@ -40,7 +41,9 @@ setExpanded(true);
           placeholder="Take a note..."
           rows={expanded ? 3 : 1 }
         />
-            {expanded &&  <DoneOutlineIcon className="button" onClick={submitNote} />}
+            <Zoom in={expanded} />
+             <DoneOutlineIcon className="button" onClick={submitNote} />
+              <Zoom />
        
       </form>
     </div>
