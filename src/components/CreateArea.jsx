@@ -38,9 +38,10 @@ setExpanded(true);
           onClick={handleExpand}
           value={note.content}
           placeholder="Take a note..."
-          rows={expanded ? 1 : 3 }
+          rows={expanded ? 3 : 1 }
         />
-        <DoneOutlineIcon className="button" onClick={submitNote} />
+            {expanded &&  <DoneOutlineIcon className="button" onClick={submitNote} />}
+       
       </form>
     </div>
   );
