@@ -5,7 +5,7 @@ function CreateArea(props) {
     title: "",
     content: ""
   });
-
+const [expanded, setExpanded]= useState(false)
   function handleChange(event) {
     const { name, value } = event.target;
 
@@ -25,22 +25,20 @@ function CreateArea(props) {
     });
     event.preventDefault();
   }
-
+function handleExpand(){
+setExpanded(true);
+}
   return (
     <div>
       <form>
-        <input
-          name="title"
-          onChange={handleChange}
-          value={note.title}
-          placeholder="Title"
-        />
+    {expanded && <input name="title" onChange={handleChange} value={note.title} placeholder="Title" />}
         <textarea
           name="content"
           onChange={handleChange}
+          onClick={handleExpand}
           value={note.content}
           placeholder="Take a note..."
-          rows="3"
+          rows={expanded ? 1 : 3 }
         />
         <DoneOutlineIcon className="button" onClick={submitNote} />
       </form>
